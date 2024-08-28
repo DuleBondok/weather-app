@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <img src="weather.jpg" id="weatherImg">
+        <div id="elementsDiv">
+            <div id="infoDiv">
+                <h1 id="cityNameHeader"></h1>
+                <p id="dateTime"></p>
+                <div id="tempDiv">
+                    <h2 id="temperatureHeading"></h2>
+                    <img src="" id="tempIcon">
+                    <h2 id="letterC"></h2>
+                    <img src="" id="weatherIcon">
+                </div>
+                <p id="tempNote"></p>
+                <div id="noteDiv">
+                    <p id="feel" style="font-size: 15px;"></p>
+                    <p style="font-size: 10px;">o</p>
+                    <p style="font-size: 15px;">C</p>
+                    <p id="humidity" style="font-size: 15px; margin-left: 20px;">Humidity: 25%</p>
+                    <p id="wind" style="font-size: 15px; margin-left: 20px;">Wind: 13.89km/h</p>
+                </div>
+
+            </div>
+            <div id="searchDiv">
+                <h1>Current Weather</h1>
+                <p>Search any location</p>
+                <img src="location.png" id="locationImg">
+                <input type="text" placeholder="City or Zip code.." id="searchInput">
+                <img id="searchImg" src="arrow.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
