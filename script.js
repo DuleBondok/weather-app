@@ -9,6 +9,11 @@ let letterC = document.getElementById("letterC");
 let tempNote = document.getElementById("tempNote");
 let weatherImg = document.getElementById("weatherImg");
 let feel = document.getElementById("feel");
+let humidity = document.getElementById("humidity");
+let wind = document.getElementById ("wind");
+let tempIcon1 = document.getElementById("tempIcon1");
+let letterC1 = document.getElementById("letterC1");
+let githubImg = document.getElementById("githubImg");
 
 searchImg.addEventListener("click", () => {
 
@@ -42,20 +47,36 @@ searchImg.addEventListener("click", () => {
             weatherIcon.src = "clear-sky.png";
             weatherImg.src = "clearSky.jpg";
         }
-        else if(condition === "Partially cloudy" || condition === "Rain, Partially cloudy")
+        else if(condition === "Partially cloudy" || condition === "Rain, Partially cloudy" || condition === "Overcast")
         {
             weatherIcon.src ="partuallyCloud.png"
             weatherImg.src = "clouds.jpg";
         }
+        else
+        {
+            weatherIcon.src = "clear-sky.png";
+            weatherImg.src = "weather.jpg";
+        }
 
         let feelsLike = Math.round((cityData.currentConditions.feelslike - 32) * 5 / 9);
         feel.textContent = `Feels like: ${feelsLike}`;
+        tempIcon1.textContent = "o";
+        letterC1.textContent = "C";
+
+        let humidityValue = cityData.currentConditions.humidity;
+        humidity.textContent = `Humidity: ${humidityValue}%`;
+
+        let windValue = cityData.currentConditions.windspeed;
+        wind.textContent = `Wind: ${windValue}km/h`;
         
     }
     
     getCity();
 })
 
+githubImg.addEventListener("click", () => {
+    window.open("https://github.com/DuleBondok"); 
+})
 
 
 
