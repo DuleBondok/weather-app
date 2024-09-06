@@ -1,3 +1,5 @@
+![weather-app](weatherApp.png)
+
 # Weather App
 Simple weather application, enter the name of the city you wish to see the data for.<br>
 Shows weather information as: live temperature, wind speed, air humidity...<br>
